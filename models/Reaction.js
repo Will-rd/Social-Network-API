@@ -4,7 +4,7 @@ const reactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId();
+            default: () => new Types.ObjectId(),
         },
         createdAt: {
             type: Date,
@@ -27,4 +27,6 @@ const reactionSchema = new Schema(
         },
         id: false,
     }
-)
+); 
+
+module.exports = reactionSchema;
