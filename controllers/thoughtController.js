@@ -99,7 +99,7 @@ module.exports = {
     //Remove a friend :-(
     async removeReaction(req, res) {
         try {
-            const thought = await Thought.findOneAndUpdate(
+            const thought = await Thought.findOneAndRemove(
                 { _id: req.params.thoughtId },
                 { $pull: { reactions: { reactionId: req.params.reactionId } } },
                 {runValidators: true, new: true }
